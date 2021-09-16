@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FocusOnNavigation</string>
+    <string name="fragment_1">Home</string>
+    <string name="fragment_2">Profile</string>
+    <string name="fragment_3">Settings</string>
+</resources>

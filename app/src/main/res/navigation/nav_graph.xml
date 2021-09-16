@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/focus_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.focusonnavigation.HomeFragment"
+        android:label="Home Fragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.app.focusonnavigation.ProfileFragment"
+        android:label="Profile Fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.app.focusonnavigation.SettingsFragment"
+        android:label="Settings Fragment" />
+    <fragment
+        android:id="@+id/rateUsFragment"
+        android:name="com.app.focusonnavigation.RateUsFragment"
+        android:label="Rate Us" />
+    <fragment
+        android:id="@+id/aboutUsFragment2"
+        android:name="com.app.focusonnavigation.AboutUsFragment"
+        android:label="AboutUsFragment" />
+    <action
+        android:id="@+id/action_global_aboutUsFragment22"
+        app:destination="@id/aboutUsFragment2"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right" />
+
+</navigation>

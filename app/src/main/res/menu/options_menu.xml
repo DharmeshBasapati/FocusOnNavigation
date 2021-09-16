@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/rateUsFragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Rate us"
+        android:menuCategory="secondary"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/option_about_us"
+        android:title="About Us"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/option_log_out"
+        android:title="Logout"
+        app:showAsAction="never" />
+
+</menu>
