@@ -1,34 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/focus_nav_graph"
-    app:startDestination="@id/homeFragment">
-
+    app:startDestination="@id/homeFragment2">
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/homeFragment2"
         android:name="com.app.focusonnavigation.HomeFragment"
-        android:label="Home Fragment" >
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_homeNextFragment2"
+            app:destination="@id/homeNextFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.app.focusonnavigation.ProfileFragment"
-        android:label="Profile Fragment" />
+        android:id="@+id/homeNextFragment2"
+        android:name="com.app.focusonnavigation.HomeNextFragment"
+        android:label="Home Next"
+        tools:layout="@layout/fragment_home_next" >
+        <argument
+            android:name="someMsg"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_homeNextFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/homeFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.app.focusonnavigation.SettingsFragment"
-        android:label="Settings Fragment" />
-    <fragment
-        android:id="@+id/rateUsFragment"
-        android:name="com.app.focusonnavigation.RateUsFragment"
-        android:label="Rate Us" />
-    <fragment
-        android:id="@+id/aboutUsFragment2"
+        android:id="@+id/aboutUsFragment"
         android:name="com.app.focusonnavigation.AboutUsFragment"
-        android:label="AboutUsFragment" />
-    <action
-        android:id="@+id/action_global_aboutUsFragment22"
-        app:destination="@id/aboutUsFragment2"
-        app:enterAnim="@android:anim/slide_in_left"
-        app:exitAnim="@android:anim/slide_out_right" />
-
+        android:label="About Us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.app.focusonnavigation.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/rateUsFragment2"
+        android:name="com.app.focusonnavigation.RateUsFragment"
+        android:label="Rate Us"
+        tools:layout="@layout/fragment_rate_us" />
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.app.focusonnavigation.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <action android:id="@+id/action_global_aboutUsFragment" app:destination="@id/aboutUsFragment" />
 </navigation>

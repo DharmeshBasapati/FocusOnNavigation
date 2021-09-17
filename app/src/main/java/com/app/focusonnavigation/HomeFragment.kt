@@ -1,11 +1,12 @@
 package com.app.focusonnavigation
 
 import android.os.Bundle
-import android.view.*
-import android.widget.Toast
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
+import androidx.navigation.fragment.findNavController
+import com.app.focusonnavigation.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
@@ -13,8 +14,14 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val binding = FragmentHomeBinding.inflate(layoutInflater)
 
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        binding.btnGoToNextScreen.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragment2ToHomeNextFragment2(someMsg = "This is some message from HOME screen.")
+            findNavController().navigate(action)
+        }
+
+        return binding.root
     }
 
 

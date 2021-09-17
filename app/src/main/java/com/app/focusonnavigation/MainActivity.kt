@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         val appBarConfiguration = AppBarConfiguration(
-            topLevelDestinationIds = setOf(R.id.homeFragment),
+            topLevelDestinationIds = setOf(R.id.homeFragment2),
         )
 
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(binding.bottomNav, navController)
 
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         super.onCreateOptionsMenu(menu)
@@ -48,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return if (item.itemId == R.id.option_about_us) {
-            val action = FocusNavGraphDirections.actionGlobalAboutUsFragment22()
+            val action = FocusNavGraphDirections.actionGlobalAboutUsFragment()
             navController.navigate(action)
             true
         } else {

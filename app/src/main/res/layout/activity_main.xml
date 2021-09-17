@@ -11,8 +11,9 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:background="@color/purple_500"
-        app:titleTextColor="@color/white"
         app:title="@string/app_name"
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        app:popupTheme="@style/Theme.MaterialComponents.Light"
         android:layout_height="wrap_content"/>
 
     <androidx.fragment.app.FragmentContainerView
